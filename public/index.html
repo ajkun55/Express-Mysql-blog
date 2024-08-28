@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Site</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      .post {
+        margin-bottom: 20px;
+        padding: 10px;
+        border: 1px solid #ccc;
+      }
+      .form {
+        margin-bottom: 20px;
+      }
+      .comment {
+        margin-top: 10px;
+        padding: 5px;
+        border: 1px solid #eee;
+        background-color: #f9f9f9;
+      }
+      .comment-form {
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Blog Posts</h1>
+    <div id="postsContainer"></div>
+
+    <h2>Create New Post</h2>
+    <div class="form">
+      <input type="text" id="title" placeholder="Post Title" required />
+      <textarea id="content" placeholder="Post Content" required></textarea>
+      <button id="createPostButton">Create Post</button>
+    </div>
+    <div id="authSection">
+      <h2>Login</h2>
+      <div class="form">
+        <input type="text" id="loginUsername" placeholder="Username" required />
+        <input
+          type="password"
+          id="loginPassword"
+          placeholder="Password"
+          required
+        />
+        <button id="loginButton">Login</button>
+      </div>
+
+      <h2>Register</h2>
+      <div class="form">
+        <input
+          type="text"
+          id="registerUsername"
+          placeholder="Username"
+          required
+        />
+        <input
+          type="password"
+          id="registerPassword"
+          placeholder="Password"
+          required
+        />
+        <button id="registerButton">Register</button>
+      </div>
+    </div>
+
+    <h2>Admin Panel</h2>
+    <div id="adminPanel" style="display: none">
+      <button id="logoutButton">Logout</button>
+      <h3>Manage Posts</h3>
+      <div id="adminPostsContainer"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
